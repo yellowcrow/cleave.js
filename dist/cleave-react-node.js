@@ -2531,6 +2531,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 
 	    getPostDelimiter: function getPostDelimiter(value, delimiter, delimiters) {
+	        if (value === null || value === undefined) {
+	            return '';
+	        }
 	        // single delimiter
 	        if (delimiters.length === 0) {
 	            return value.slice(-delimiter.length) === delimiter ? delimiter : '';
